@@ -1,11 +1,3 @@
-	
-	
-
-
-
-	//this.impulseResponseBuffer = sourceNode.buffer;
-
-
 var Reverb = function(context, parameters) {
 	
 	this.context = context;
@@ -17,15 +9,6 @@ var Reverb = function(context, parameters) {
 	convolver = context.createConvolver(); //reverbLine
 	this.wetGain = context.createGain(); 
 	this.dryGain = context.createGain();
-	
-
-
-
-	//slinky_ir = new reverbObject('slinky_ir.wav');
-	// grab audio track via XHR for convolver node
-
-	//var sourceNode, impulseResponseBuffer;
-	//sourceNode = context.createBufferSource();
 
 	getSound = new XMLHttpRequest();
 	getSound.open("GET", "slinky_ir.ogg", true);
@@ -36,29 +19,11 @@ var Reverb = function(context, parameters) {
 		context.decodeAudioData(audioData, function(buffer) {
       		this.impulseResponseBuffer = buffer;
       		convolver.buffer = this.impulseResponseBuffer;
-      		//convolver.loop = true;
-      		//convolver.connect(this.wetGain);
-      		console.log("File has been loaded.")
-      		console.log(convolver.buffer);
-      		console.log(this.impulseResponseBuffer);
-      		//sourceNode.connect(this.wetGain);
-  			
-  			//sourceNode.start();
-  			//callback(sourceNode.buffer);
-
     	}, function(e){"Error with decoding audio data" + e.err});
 
 	}
 
-
 	getSound.send();
-	//this.convolver.buffer = impulseResponseBuffer;
-	
-
-	//console.log(this.impulseResponseBuffer);
-	
-	
-	
 
 	// connect 
 	this.input.connect(convolver);
@@ -73,8 +38,6 @@ var Reverb = function(context, parameters) {
 	this.dryGain.gain.value = (1-parameters.reverbWetDry);
 
 	this.parameters = parameters;
-
-	//this.convolver.start();
 
 }
 
