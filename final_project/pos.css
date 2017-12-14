@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+
+
+p.panelLabel {clear : left;
+				margin-top : 20px;}
+
+#selectfilter {float:left;margin-right:10px;margin-bottom : 20px;} 
+#selectosc {float:left;margin-right:20px;margin-bottom : 20px;}
+#toggle {float : left;margin-right:30px;margin-bottom : 20px;}
+#slider {clear:left;margin-right:20px;margin-bottom : 20px;} 
+
+#delayFeed {float:left;margin-right:10px;margin-bottom : 20px;} 
+#delayWet {float:left;margin-right:20px;margin-bottom : 20px;} 
+#position {    position: absolute;
+    top: 80px;
+    right: 150px;
+} 
+
+
+#sequencer{float:left;margin-right: 10px; }
+#bpm {float:left; margin-right:30px;}
+#toggleGate {clear : left;}
+
+#button {float: right;}
+#phaserFreq {float:left;margin-right:10px;} 
+#phaserWet {float:left;margin-right:20px;} 
+
+
