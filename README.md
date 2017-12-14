@@ -1,6 +1,4 @@
-# CTP431
-
-Trippy pad
+# Trippy PAD
 
 Introduction:
 
